@@ -5,7 +5,7 @@
 
 [hub]: https://hub.docker.com/r/reufko/machinelearning
 
-This is a repository for various docker images created for the lecture on Machine Learning.
+This is a repository for various docker images created by [Reuf Kozlica](https://github.com/reufko) and [Max Schirl]() for the lecture on Machine Learning.
 
 ## Supported tags
 * Ubuntu 18.04 based images:
