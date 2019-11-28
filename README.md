@@ -31,7 +31,7 @@ Run command for Ubuntu 18.04 with Anaconda:
 docker run --rm -ti -p 8888:8888 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
 ```
 The command above will run the image which has a built in command to run Jupyter Notebook in the background on the port 8888. 
-With the flag `-p 8888:8888` we are telling docker to map the port 8888 from the virtual machine to the port 8000 on the host machine.
+With the flag `-p 8888:8888` we are telling docker to map the port 8888 from the virtual machine to the port 8888 on the host machine.
 
 **Important**: The flag `-v notebooks:/notebooks` tells docker that it should create a virtual volume on the host machine named notebooks and map 
 it to the /notebooks folder in the virtual machine. If you don't specify this parameter your changes in the /notebooks folder 
