@@ -3,6 +3,10 @@ FROM continuumio/anaconda3:2019.10-alpine
 USER root
 	
 RUN apk add screen git
+	
+RUN /opt/conda/bin/conda update --prefix /opt/conda anaconda -y
+
+RUN /opt/conda/bin/conda install scikit-learn -y
 
 RUN /opt/conda/bin/conda install jupyter -y && \
 	/opt/conda/bin/conda install tensorflow -y && /opt/conda/bin/conda install keras -y 
