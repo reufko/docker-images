@@ -15,6 +15,8 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
     echo "conda activate base" >> ~/.bashrc && \
 	echo "Miniconda successfully installed"
 	
+RUN /opt/conda/bin/conda update --all -y
+	
 RUN /opt/conda/bin/conda update --prefix /opt/conda anaconda -y
 
 RUN /opt/conda/bin/conda install scikit-learn -y
