@@ -4,7 +4,7 @@ USER root
 	
 RUN apk add screen git
 	
-RUN /opt/conda/bin/conda update --prefix /opt/conda anaconda -y
+RUN /opt/conda/bin/conda update --all -y
 
 RUN /opt/conda/bin/conda install scikit-learn -y
 
