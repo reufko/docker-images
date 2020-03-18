@@ -10,6 +10,10 @@ RUN /opt/conda/bin/conda install scikit-learn -y
 
 RUN /opt/conda/bin/conda install jupyter -y && \
 	/opt/conda/bin/conda install tensorflow -y && /opt/conda/bin/conda install keras -y 
+
+RUN /opt/conda/bin/conda install -c conda-forge pyldavis -y
+	
+RUN python3 -c "import nltk; nltk.download('book')"
 	
 VOLUME /notebooks
 
