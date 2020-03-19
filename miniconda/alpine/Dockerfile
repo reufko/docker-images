@@ -13,7 +13,7 @@ RUN /opt/conda/bin/conda install jupyter -y && \
 
 RUN /opt/conda/bin/conda install -c conda-forge pyldavis -y
 	
-RUN /opt/conda/bin/python3 -c "import nltk; nltk.download('book')"
+RUN /opt/conda/bin/conda install -c anaconda nltk && /opt/conda/bin/python3 -c "import nltk; nltk.download('book')"
 	
 VOLUME /notebooks
 
