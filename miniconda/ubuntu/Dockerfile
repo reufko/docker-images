@@ -15,12 +15,16 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
     echo "conda activate base" >> ~/.bashrc && \
 	echo "Miniconda successfully installed"
 	
-RUN /opt/conda/bin/conda update --prefix /opt/conda anaconda -y
+RUN /opt/conda/bin/conda update --all -y
 
 RUN /opt/conda/bin/conda install scikit-learn -y
 	
 RUN /opt/conda/bin/conda install jupyter -y && \
 	/opt/conda/bin/conda install tensorflow -y && /opt/conda/bin/conda install keras -y 
+
+RUN /opt/conda/bin/conda install -c conda-forge pyldavis -y
+	
+RUN /opt/conda/bin/conda install -c anaconda nltk && python3 -c "import nltk; nltk.download('book')"
 
 VOLUME /notebooks
 
