@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3:2019.10-alpine
+FROM continuumio/anaconda3:2020.07-alpine
 
 USER root
 	

@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.7.12-alpine
+FROM continuumio/miniconda3:4.8.2-alpine
 
 USER root
 	
