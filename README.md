@@ -39,3 +39,10 @@ it to the /notebooks folder in the virtual machine. If you don't specify this pa
 
 As soon as the machine has been started you will be able to view the Jupyter Notebook by opening `http://localhost:8888` in your browser, 
 or `http://<DOCKER-MACHINE-IP>:8888` if you are using a Docker Machine VM.
+
+## Update image
+In order to update your local image to the newest image from Github use following commands:
+```shell
+docker pull reufko/machinelearning:anaconda-ubuntu 
+docker run --rm -ti -p 8888:8888 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
+```
