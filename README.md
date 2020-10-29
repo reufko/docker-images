@@ -28,10 +28,10 @@ All of the images run a linux virtual machine on your computer and run a [Jupyte
 Run command to start a container with Ubuntu 18.04 and Anaconda:
 
 ```shell
-docker run --rm -ti -p 8888:8888 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
+docker run --rm -ti -p 8888:8888 -p 6006:6006 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
 ```
 The command above will run the image which has a built in command to run Jupyter Notebook in the background on the port 8888. 
-With the flag `-p 8888:8888` we are telling docker to map the port 8888 from the virtual machine to the port 8888 on the host machine.
+With the flag `-p 8888:8888` we are telling docker to map the port 8888 from the virtual machine to the port 8888 on the host machine. The same is happening with the port 6006.
 
 **Important**: The flag `-v notebooks:/notebooks` tells docker that it should create a virtual volume on the host machine named notebooks and map 
 it to the /notebooks folder in the virtual machine. If you don't specify this parameter your changes in the /notebooks folder 
@@ -44,5 +44,5 @@ or `http://<DOCKER-MACHINE-IP>:8888` if you are using a Docker Machine VM.
 In order to update your local image to the newest image from Github use following commands:
 ```shell
 docker pull reufko/machinelearning:anaconda-ubuntu 
-docker run --rm -ti -p 8888:8888 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
+docker run --rm -ti -p 8888:8888 -p 6006:6006 -v notebooks:/notebooks reufko/machinelearning:anaconda-ubuntu 
 ```
